@@ -1,42 +1,59 @@
-
+/* General page styling */
 body {
-    background-color: #f0f8ff; 
+    background-color: #f0f8ff; /* Light blue background for the whole page */
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 20px; /* Padding around the body */
     line-height: 1.6;
 }
 
-
+/* Header background color and padding */
 header {
-    background-color: #0044cc; 
+    background-color: #0044cc; /* Dark blue background for the header */
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px; /* More padding for the header */
+    margin-bottom: 20px; /* Add spacing below the header */
 }
 
+/* Headings styling */
+h1 {
+    font-size: 2.5em; /* Larger font size for main title */
+    margin-bottom: 10px;
+}
 
+h2, h3 {
+    font-size: 1.75em;
+    margin: 15px 0;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 20px; /* Extra spacing above category titles */
+}
+
+/* Content section styling */
 section.content {
-    background-color: #e9f7f7; 
+    background-color: #e9f7f7; /* Light cyan background for content */
     padding: 20px;
-    margin: 20px auto;
+    margin: 20px auto; /* Center the section and add vertical spacing */
     max-width: 800px;
     border-radius: 8px;
 }
 
-
+/* Addendum section styling */
 section.addendum {
-    background-color: #f4f4f9; 
-    padding: 15px;
-    margin: 20px auto;
+    background-color: #f4f4f9; /* Light grey background for addendum */
+    padding: 20px;
+    margin: 20px auto; /* Vertical spacing and center alignment */
     max-width: 800px;
     border-radius: 8px;
     border: 1px solid #ccc;
 }
 
-
+/* Categories section styling */
 section.categories {
-    background-color: #fafad2; 
+    background-color: #fafad2; /* Light yellow background for categories */
     padding: 20px;
     margin: 20px auto;
     max-width: 800px;
@@ -46,6 +63,10 @@ section.categories {
 .category-table {
     display: flex;
     justify-content: space-between;
+}
+
+.category {
+    margin: 10px; /* Spacing between the categories */
 }
 
 .category ul {
@@ -58,13 +79,26 @@ section.categories {
     color: #333;
 }
 
-
+/* Footer styling */
 footer {
-    background-color: #0044cc; 
+    background-color: #0044cc; /* Same dark blue as header */
     color: white;
     text-align: center;
     padding: 10px;
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+/* Miscellaneous */
+.featured-image {
+    margin: 0 20px 20px 0; /* Space around the image */
+}
+
+.highlight {
+    font-style: italic;
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #0044cc;
+    margin-bottom: 20px;
 }
