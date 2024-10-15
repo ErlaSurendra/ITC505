@@ -1,24 +1,24 @@
-/* General page styling */
+
 body {
-    background-color: #f0f8ff; /* Light blue background for the whole page */
+    background-color: #f0f8ff; 
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px; /* Padding around the body */
     line-height: 1.6;
 }
 
-/* Header background color and padding */
+
 header {
-    background-color: #0044cc; /* Dark blue background for the header */
+    background-color: #0044cc; 
     color: white;
     text-align: center;
     padding: 40px 20px; /* More padding for the header */
     margin-bottom: 20px; /* Add spacing below the header */
 }
 
-/* Headings styling */
+
 h1 {
-    font-size: 2.5em; /* Larger font size for main title */
+    font-size: 2.5em; 
     margin-bottom: 10px;
 }
 
@@ -32,28 +32,28 @@ h3 {
     margin-top: 20px; /* Extra spacing above category titles */
 }
 
-/* Content section styling */
+
 section.content {
-    background-color: #e9f7f7; /* Light cyan background for content */
+    background-color: #e9f7f7; 
     padding: 20px;
-    margin: 20px auto; /* Center the section and add vertical spacing */
+    margin: 20px auto; 
     max-width: 800px;
     border-radius: 8px;
 }
 
-/* Addendum section styling */
+
 section.addendum {
-    background-color: #f4f4f9; /* Light grey background for addendum */
+    background-color: #f4f4f9; 
     padding: 20px;
-    margin: 20px auto; /* Vertical spacing and center alignment */
+    margin: 20px auto; 
     max-width: 800px;
     border-radius: 8px;
     border: 1px solid #ccc;
 }
 
-/* Categories section styling */
+
 section.categories {
-    background-color: #fafad2; /* Light yellow background for categories */
+    background-color: #fafad2;
     padding: 20px;
     margin: 20px auto;
     max-width: 800px;
@@ -66,7 +66,7 @@ section.categories {
 }
 
 .category {
-    margin: 10px; /* Spacing between the categories */
+    margin: 10px; 
 }
 
 .category ul {
@@ -79,9 +79,9 @@ section.categories {
     color: #333;
 }
 
-/* Footer styling */
+
 footer {
-    background-color: #0044cc; /* Same dark blue as header */
+    background-color: #0044cc; 
     color: white;
     text-align: center;
     padding: 10px;
