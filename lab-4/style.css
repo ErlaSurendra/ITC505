@@ -1,32 +1,32 @@
-/* General page background color */
+
 body {
-    background-color: #f0f8ff; /* Light blue background for the whole page */
+    background-color: #f0f8ff; 
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 
-/* Header background color */
+
 header {
-    background-color: #0044cc; /* Dark blue background for the header */
+    background-color: #0044cc; 
     color: white;
     text-align: center;
     padding: 20px;
 }
 
-/* Content section background */
+
 section.content {
-    background-color: #e9f7f7; /* Light cyan background for content */
+    background-color: #e9f7f7; 
     padding: 20px;
     margin: 20px auto;
     max-width: 800px;
     border-radius: 8px;
 }
 
-/* Addendum section */
+
 section.addendum {
-    background-color: #f4f4f9; /* Light grey background for the addendum */
+    background-color: #f4f4f9; 
     padding: 15px;
     margin: 20px auto;
     max-width: 800px;
@@ -34,9 +34,9 @@ section.addendum {
     border: 1px solid #ccc;
 }
 
-/* Category section background */
+
 section.categories {
-    background-color: #fafad2; /* Light yellow background for categories */
+    background-color: #fafad2; 
     padding: 20px;
     margin: 20px auto;
     max-width: 800px;
@@ -58,9 +58,9 @@ section.categories {
     color: #333;
 }
 
-/* Footer section */
+
 footer {
-    background-color: #0044cc; /* Same dark blue as header */
+    background-color: #0044cc; 
     color: white;
     text-align: center;
     padding: 10px;
