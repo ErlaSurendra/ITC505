@@ -1,1 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+#story {
+    margin: 1rem;
+    font-size: 1.2rem;
+}
+
+#choices button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+#image-section {
+    margin-top: 1rem;
+}
+
+footer {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #777;
+}
 
