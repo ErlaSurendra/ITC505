@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 6 - Holy Grail Layout</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header style="font-size: 36px;"> LAB 6 - Do Something </header>
+    
+    <nav>
+        <span style="font-weight: bold; font-size: 24px;">contents</span>
+        <br>
+        <a href="https://erlasurendra.github.io/ITC505/lab-4/index.html">LAB-4</a>
+        <br>
+        <a href="https://example.com/page2">LAB-3</a>
+        <br>
+        <a href="https://example.com/page3">LAB-2</a>
+    </nav>
+        
+        
+    
+    <main>
+        <!-- This is where our JavaScript interactive content will go -->
+        <section id="interactive-content"></section>
+    </main>
+    <aside>
+        <a href="https://www.amazon.com/s?k=laptop&crid=34D97UJC1GKI2&sprefix=laptop%2Caps%2C1173&ref=nb_sb_ss_ts-doa-p_1_6" target="_blank">
+            <img src="images/AdobeStock_358648159_Preview.jpeg" alt="Advertisement" width="200" height="100">
+        </a>
+    </aside>
+    
+    <footer width="200" height="200">
+        <p>Addendum: The problem I chose to solve with JavaScript was to create a simple array sorting interface. .</p>
+        <p>To implement this solution, I used JavaScript for the sorting algorithm and DOM manipulation.(1)HTML Layout(2)JavaScript Sorting Logic(3)Display Results</p>
+        <p> The difficulties encountered along the way and the solutions to those difficulties (1)Algorithm Optimization (2)Real-Time Error Messages</p>
+        <p>Last updated: <span id="lastModified"></span></p>
+    </footer>
+    <script type="text/javascript">
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+</body>
+</html>
