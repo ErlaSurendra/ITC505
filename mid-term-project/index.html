@@ -3,34 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choose Your Adventure</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Cow and Tiger Adventure Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-
     <header>
-        <h1>Choose Your Adventure</h1>
+        <h1>Cow and Tiger Adventure</h1>
     </header>
-
-    <main>
-        <div id="story"></div>
-        <div id="choices"></div>
-        <div id="image-section">
-            <img id="story-image" src="" alt="Story image">
+    <div id="story-container">
+        <p id="story-text">Welcome to the Cow and Tiger Adventure!</p>
+        <div id="choices-container"></div>
+        <div id="image-container">
+            <img id="story-image" src="" alt="Story Image">
         </div>
-    </main>
-
+    </div>
     <footer>
-        <p>Last updated: 
-            <span id="lastModified"></span>
-        </p>
+        <p>Last updated: <span id="lastModified"></span></p>
     </footer>
-
-    <script src="script.js"></script>
-    <script type="text/javascript">
-        var x = document.lastModified;
-        document.getElementById('lastModified').textContent = x;
+    <script>
+         document.getElementById('lastModified').textContent = document.lastModified;
     </script>
 </body>
 </html>
-
