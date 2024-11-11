@@ -1,84 +1,102 @@
-// Define the story structure
-const storyStages = {
+// Story data with each stage as an object
+const story = {
     start: {
-        text: "You find yourself at a fork in the road. Do you go left or right?",
-        choices: [
-            { text: "Go left", consequence: "leftPath" },
-            { text: "Go right", consequence: "rightPath" }
-        ],
+        text: "You are a cow grazing near the forest and hear a rustling sound. Do you investigate or ignore it?",
+        choices: ["Investigate the sound", "Ignore it"],
+        consequence: ["investigate", "ignore"],
         image: "images/start.jpg"
     },
-    leftPath: {
-        text: "You encounter a river. Do you swim across or walk along the bank?",
-        choices: [
-            { text: "Swim across", consequence: "swimEnd" },
-            { text: "Walk along the bank", consequence: "bankEnd" }
-        ],
+    ignore: {
+        text: "You decide to ignore the sound and continue grazing. The day passes peacefully, and you feel content. The adventure ends here.",
+        choices: [],
+        consequence: [],
+        image: "images/end.jpg"
+    },
+    investigate: {
+        text: "You move closer and encounter a tiger! Do you try to run away or attempt to befriend the tiger?",
+        choices: ["Run away", "Befriend the tiger"],
+        consequence: ["runAway", "befriend"],
+        image: "images/tiger.jpg"
+    },
+    runAway: {
+        text: "You start running away from the tiger. You see a bush and a river ahead. Do you hide in the bushes or try to cross the river?",
+        choices: ["Hide in bushes", "Cross the river"],
+        consequence: ["hideInBushes", "crossRiver"],
+        image: "images/runAway.jpg"
+    },
+    befriend: {
+        text: "You try to befriend the tiger. Surprisingly, the tiger seems friendly! Do you offer it some grass or ask it to explore with you?",
+        choices: ["Offer grass", "Explore together"],
+        consequence: ["offerGrass", "exploreTogether"],
+        image: "images/befriend.jpg"
+    },
+    hideInBushes: {
+        text: "You hide in the bushes, holding your breath. The tiger walks past, and you manage to escape safely. The adventure ends here.",
+        choices: [],runAway
+        consequence: [],
+        image: "images/hide.jpg"
+    },
+    crossRiver: {
+        text: "You attempt to cross the river, but the current is strong. Do you swim harder or call for help?",
+        choices: ["Swim harder", "Call for help"],
+        consequence: ["swimHarder", "callForHelp"],
         image: "images/river.jpg"
     },
-    rightPath: {
-        text: "You enter a dark forest. Do you venture deeper or turn back?",
-        choices: [
-            { text: "Venture deeper", consequence: "forestEnd" },
-            { text: "Turn back", consequence: "start" }
-        ],
-        image: "images/forest.jpg"
-    },
-    swimEnd: {
-        text: "You manage to cross the river but reach a dead end. Ending 1.",
+    offerGrass: {
+        text: "The tiger sniffs the grass and seems unimpressed. It decides to leave, and you go back to grazing. The adventure ends here.",
         choices: [],
+        consequence: [],
+        image: "images/grass.jpg"
+    },
+    exploreTogether: {
+        text: "You and the tiger explore the forest together. You feel a sense of adventure and make a new friend! The adventure ends here.",
+        choices: [],
+        consequence: [],
+        image: "images/explore.jpg"
+    },
+    swimHarder: {
+        text: "You try to swim harder, but the current pulls you under. You struggle and eventually find yourself washed up on the shore, exhausted. The adventure ends here.",
+        choices: [],
+        consequence: [],
         image: "images/swim.jpg"
     },
-    bankEnd: {
-        text: "You find a safe path and reach a village. Ending 2.",
+    callForHelp: {
+        text: "You call for help, and a kind fisherman hears you. He rescues you from the river and takes you back to safety. The adventure ends here.",
         choices: [],
-        image: "images/village.jpg"
-    },
-    forestEnd: {
-        text: "You discover a hidden treasure in the forest. Ending 3.",
-        choices: [],
-        image: "images/treasure.jpg"
+        consequence: [],
+        image: "images/fisherman.jpg"
     }
 };
 
-// Game State
-let currentStage = 'start';
+let currentStage;
 
-// Initialize game
 function startGame() {
-    currentStage = 'start';
+    currentStage = "start";
     updatePage();
 }
-
-// Update the story and choices based on the current stage
 function updatePage() {
-    const stage = storyStages[currentStage];
-    document.getElementById('story').innerText = stage.text;
-
-    const choicesDiv = document.getElementById('choices');
-    choicesDiv.innerHTML = '';  // Clear previous choices
-
-    stage.choices.forEach(choice => {
-        const button = document.createElement('button');
-        button.innerText = choice.text;
-        button.onclick = () => {
-            currentStage = choice.consequence;
+    const stage = story[currentStage];
+    
+    document.getElementById("story-text").textContent = stage.text;
+    document.getElementById("story-image").src = stage.image;
+    
+    const choicesContainer = document.getElementById("choices-container");
+    choicesContainer.innerHTML = "";  // Clear previous choices
+    
+    stage.choices.forEach((choiceText, index) => {
+        const button = document.createElement("button");
+        button.textContent = choiceText;
+        button.addEventListener("click", () => {
+            currentStage = stage.consequence[index];
             updatePage();
-        };
-        choicesDiv.appendChild(button);
+        });
+        choicesContainer.appendChild(button);
     });
-
-    // Update image based on current stage
-    const img = document.getElementById('story-image');
-    img.src = stage.image;
 }
-
-// End the game
 function endGame() {
-    const stage = storyStages[currentStage];
-    document.getElementById('story').innerText = stage.text;
-    document.getElementById('choices').innerHTML = '';
+    const stage = story[currentStage];
+    document.getElementById("story-text").textContent = stage.text;
+    document.getElementById("story-image").src = stage.image;
+    document.getElementById("choices-container").innerHTML = ""; // Remove choices
 }
-
-// Start the game when the page loads
-window.onload = startGame;
+startGame();
