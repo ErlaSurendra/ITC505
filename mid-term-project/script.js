@@ -4,7 +4,7 @@ const story = {
         text: "You are a cow grazing near the forest and hear a rustling sound. Do you investigate or ignore it?",
         choices: ["Investigate the sound", "Ignore it"],
         consequence: ["investigate", "ignore"],
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkpbnx35p9Osw2Y3Gege0v54ySKJseXLh6Sw&s"
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPs0vKoImVC4tJxjhoAwvgwVVXFYGEmsPnrA&s"
     },
     ignore: {
         text: "You decide to ignore the sound and continue grazing. The day passes peacefully, and you feel content. The adventure ends here.",
