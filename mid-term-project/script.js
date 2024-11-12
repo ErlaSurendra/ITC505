@@ -10,61 +10,61 @@ const story = {
         text: "You decide to ignore the sound and continue grazing. The day passes peacefully, and you feel content. The adventure ends here.",
         choices: [],
         consequence: [],
-        image: "images/end.jpg"
+        image: "mid-term-project/images/end.jpg"
     },
     investigate: {
         text: "You move closer and encounter a tiger! Do you try to run away or attempt to befriend the tiger?",
         choices: ["Run away", "Befriend the tiger"],
         consequence: ["runAway", "befriend"],
-        image: "images/tiger.jpg"
+        image: "mid-term-project/images/tiger.jpg"
     },
     runAway: {
         text: "You start running away from the tiger. You see a bush and a river ahead. Do you hide in the bushes or try to cross the river?",
         choices: ["Hide in bushes", "Cross the river"],
         consequence: ["hideInBushes", "crossRiver"],
-        image: "images/runAway.jpg"
+        image: "mid-term-project/images/runAway.jpg"
     },
     befriend: {
         text: "You try to befriend the tiger. Surprisingly, the tiger seems friendly! Do you offer it some grass or ask it to explore with you?",
         choices: ["Offer grass", "Explore together"],
         consequence: ["offerGrass", "exploreTogether"],
-        image: "images/befriend.jpg"
+        image: "mid-term-project/images/befriend.jpg"
     },
     hideInBushes: {
         text: "You hide in the bushes, holding your breath. The tiger walks past, and you manage to escape safely. The adventure ends here.",
         choices: [],
         consequence: [],
-        image: "images/hide.jpg"
+        image: "mid-term-project/images/hide.jpg"
     },
     crossRiver: {
         text: "You attempt to cross the river, but the current is strong. Do you swim harder or call for help?",
         choices: ["Swim harder", "Call for help"],
         consequence: ["swimHarder", "callForHelp"],
-        image: "images/river.jpg"
+        image: "mid-term-project/images/river.jpg"
     },
     offerGrass: {
         text: "The tiger sniffs the grass and seems unimpressed. It decides to leave, and you go back to grazing. The adventure ends here.",
         choices: [],
         consequence: [],
-        image: "images/grass.jpg"
+        image: "mid-term-project/images/grass.jpg"
     },
     exploreTogether: {
         text: "You and the tiger explore the forest together. You feel a sense of adventure and make a new friend! The adventure ends here.",
         choices: [],
         consequence: [],
-        image: "images/explore.jpg"
+        image: "mid-term-project/images/explore.jpg"
     },
     swimHarder: {
         text: "You try to swim harder, but the current pulls you under. You struggle and eventually find yourself washed up on the shore, exhausted. The adventure ends here.",
         choices: [],
         consequence: [],
-        image: "images/swim.jpg"
+        image: "mid-term-project/images/swim.jpg"
     },
     callForHelp: {
         text: "You call for help, and a kind fisherman hears you. He rescues you from the river and takes you back to safety. The adventure ends here.",
         choices: [],
         consequence: [],
-        image: "images/fisherman.jpg"
+        image: "mid-term-project/images/fisherman.jpg"
     }
 };
 
