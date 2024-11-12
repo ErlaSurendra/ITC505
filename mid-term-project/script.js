@@ -10,7 +10,7 @@ const story = {
         text: "You decide to ignore the sound and continue grazing. The day passes peacefully, and you feel content. The adventure ends here.",
         choices: [],
         consequence: [],
-        image: "mid-term-project/images/end.jpg"
+        image: "	https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJbBoXi8WMtuOCKUHRG5FL-wU1ZQzLpT1VeA&s"
     },
     investigate: {
         text: "You move closer and encounter a tiger! Do you try to run away or attempt to befriend the tiger?",
