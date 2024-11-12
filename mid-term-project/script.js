@@ -32,7 +32,7 @@ const story = {
     },
     hideInBushes: {
         text: "You hide in the bushes, holding your breath. The tiger walks past, and you manage to escape safely. The adventure ends here.",
-        choices: [],runAway
+        choices: [],
         consequence: [],
         image: "images/hide.jpg"
     },
