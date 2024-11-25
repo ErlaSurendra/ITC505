@@ -98,18 +98,12 @@
       <h1>Mad Libs</h1>
       <form id="madLibsForm">
         <div class="form-group">
-          <label for="noun">Name:</label>
+          <label for="noun">Enter Name:</label>
           <input type="text" id="noun" name="noun" required />
         </div>
         <div class="form-group">
-          <label for="adjective">Qualities:</label>
-          <select id="adjective" name="adjective" required>
-            <option value="">Select a quality</option>
-            <option value="Honest">Honest</option>
-            <option value="Confidence">Confidence</option>
-            <option value="creativity">creativity</option>
-            <option value="Loyalty">Loyalty</option>
-          </select>
+          <label for="adjective">Enter Qualities:</label>
+          <input type="text" id="adjective" name="adjective" required />
         </div>
         <div class="form-group">
           <label for="verb">Fond Memories:</label>
@@ -117,26 +111,20 @@
         </div>
         <div class="form-group">
           <label for="emotion">Emotion:</label>
-          <select id="emotion" name="emotion" required>
-            <option value="">Select an emotion</option>
-            <option value="Sadness">Sadness</option>
-            <option value="Anger">Anger</option>
-            <option value="Fear">Fear</option>
-            <option value="Surprise">Surprise</option>
-          </select>
+          <input type="text" id="emotion" name="emotion" required />
         </div>
         <div class="form-group">
           <label for="place">Place:</label>
           <input type="text" id="place" name="place" required />
         </div>
-        <button type="submit">Generate Story</button>
+        <button type="submit">submit</button>
       </form>
       <p>Addendum:</p>
       <ul>
         <li>
           As a first step, I have designed an entire HTML code and applied
           styling to that, and then I have implemented a javascript script to
-          perform various operations. When I click the generation button, it
+          perform various operations. When I click the submit button, it
           should generate a story based on the inputs I provide, and if I click
           the back button, it should take me back to the previous form.
         </li>
