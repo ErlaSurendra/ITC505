@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation with Style</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #4facfe, #00f2fe);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], 
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4facfe;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #00c9fe;
+        }
+
+        .form-container p {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+    </style>
+    <script>
+        function sanitizeInput(input) {
+            var div = document.createElement('div');
+            div.appendChild(document.createTextNode(input));
+            return div.innerHTML;
+        }
+
+        function validateForm() {
+            var firstName = sanitizeInput(document.forms["myForm"]["firstName"].value);
+            var lastName = sanitizeInput(document.forms["myForm"]["lastName"].value);
+            var email = sanitizeInput(document.forms["myForm"]["email"].value);
+            var password = sanitizeInput(document.forms["myForm"]["password"].value);
+            var confirmPassword = sanitizeInput(document.forms["myForm"]["confirmPassword"].value);
+
+            if (firstName == "" || lastName == "" || email == "" || password == "" || confirmPassword == "") {
+                alert("All fields must be filled out.");
+                return false;
+            }
+
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Sign Up Form</h2>
+        <form name="myForm" onsubmit="return validateForm()">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName">
+            
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName">
+            
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword">
+            
+            <input type="submit" value="Submit">
+        </form>
+        <p>All fields are mandatory.</p>
+    </div>
+</body>
+</html>
