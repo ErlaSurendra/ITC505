@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lights Out</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Lights Out</h1>
+    <p>Click the squares to toggle lights. Turn off all lights to win!</p>
+    <p id="timer">Time: 0s</p>
+    <div id="game-board"></div>
+    <p><button id="restart-game-btn">Restart Game</button></p>
+
+    <div id="win-popup" class="hidden">
+        <div class="popup-content">
+            <h2>🎉 You Win! 🎉</h2>
+            <p id="final-time"></p>
+            <button id="restart-btn">Play Again</button>
+        </div>
+    </div>
+
+    <button id="addendum-btn">View Addendum</button>
+<div id="addendum-modal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Development Addendum</h2>
+        <p><strong>Process:</strong> Dynamic grid generation, light toggling logic...</p>
+        <p><strong>Creative Choices:</strong> Random grid initialization, vibrant colors...</p>
+        <p><strong>Challenges:</strong> Managing boundary conditions...</p>
+        <p><strong>Insights:</strong> Modular coding, scalable design...</p>
+    </div>
+</div>
+
+    <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script type="text/javascript">
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
 
